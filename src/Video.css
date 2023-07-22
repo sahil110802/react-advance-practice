@@ -6,3 +6,8 @@
     color:white;
     margin-left: 1rem;
 }
+img{
+    border: solid black;
+    
+    border-radius: 1rem;
+}

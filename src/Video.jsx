@@ -1,16 +1,18 @@
 import React from "react";
 import "./Video.css";
+
 const Video = ({
+  id,
   title,
   channel = "DEFAULT",
   views,
   time,
-  verified = true,
+  verified = false,
 }) => {
   return (
     <div className="parent">
       <div className="pic">
-        <img src="https://picsum.photos/id/3/160/90" alt="thumbnail" />
+        <img src={`https://picsum.photos/id/${id}/160/90`} alt="thumbnail" />
       </div>
       <div className="title">{title}</div>
       <div className="channel">
