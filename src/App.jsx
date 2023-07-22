@@ -4,8 +4,8 @@ import "./App.css";
 const App = () => {
   return (
     <div className="app">
-      <Video title={"ReactJs tutorial"} bgColor={"blue"} />
-      <Video title={"NodeJs tutorial"} bgColor={"green"} />
+      <Video title={"ReactJs tutorial"} channel={"sahil"} />
+      <Video title={"NodeJs tutorial"} verified={false} />
     </div>
   );
 };
