@@ -1,4 +1,4 @@
-let videos = [
+let videosDB = [
   {
     id: 1,
     title: "ReactJS",
@@ -24,4 +24,4 @@ let videos = [
   },
 ];
 
-export default videos;
+export default videosDB;

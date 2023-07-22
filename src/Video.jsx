@@ -8,6 +8,7 @@ const Video = ({
   views,
   time,
   verified = false,
+  children,
 }) => {
   return (
     <div className="parent">
@@ -22,6 +23,7 @@ const Video = ({
       <div className="views">
         {views} views <span>.</span> {time}
       </div>
+      <div>{children}</div>
     </div>
   );
 };
