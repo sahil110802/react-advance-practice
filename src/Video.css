@@ -5,9 +5,14 @@
 .parent{
     color:white;
     margin-left: 1rem;
+    position: relative;
 }
 img{
     border: solid black;
     
     border-radius: 1rem;
+}
+.close{
+    position: absolute;
+    right: 0;
 }
