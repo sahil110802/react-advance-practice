@@ -8,7 +8,7 @@ const initialState = {
   title: "",
   views: "",
 };
-const AddVideo = ({ AddVideos, editableVideo, updateVideo }) => {
+const AddVideo = ({ dispatch, editableVideo }) => {
   const [video, setVideo] = useState(initialState);
   const handleChange = (e) => {
     setVideo({ ...video, [e.target.name]: e.target.value });
@@ -16,9 +16,9 @@ const AddVideo = ({ AddVideos, editableVideo, updateVideo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!editableVideo) {
-      AddVideos(video);
+      dispatch({ type: "ADD", payload: video });
     } else {
-      updateVideo(video);
+      dispatch({ type: "UPDATE", payload: video });
     }
     setVideo(initialState);
   };
