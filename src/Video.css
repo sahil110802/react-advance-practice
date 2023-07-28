@@ -16,3 +16,7 @@ img{
     position: absolute;
     right: 0;
 }
+.edit{
+    position: absolute;
+    right: 2em;
+}
