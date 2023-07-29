@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./AddVideo.css";
+import VideoDispatchContext from "./context/VideoDispatchContext";
 
 const initialState = {
   channel: "sahil",
@@ -8,7 +9,9 @@ const initialState = {
   title: "",
   views: "",
 };
-const AddVideo = ({ dispatch, editableVideo }) => {
+const AddVideo = ({ editableVideo }) => {
+  const dispatch = useContext(VideoDispatchContext);
+
   const [video, setVideo] = useState(initialState);
   const handleChange = (e) => {
     setVideo({ ...video, [e.target.name]: e.target.value });
@@ -20,6 +23,7 @@ const AddVideo = ({ dispatch, editableVideo }) => {
     } else {
       dispatch({ type: "UPDATE", payload: video });
     }
+
     setVideo(initialState);
   };
 

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Video.css";
+import VideoDispatchContext from "./context/VideoDispatchContext";
 
 const Video = ({
   id,
@@ -11,8 +12,8 @@ const Video = ({
   children,
   deleteVideo,
   editVideo,
-  dispatch,
 }) => {
+  const dispatch = useContext(VideoDispatchContext);
   return (
     <div className="parent">
       <div>

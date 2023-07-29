@@ -7,3 +7,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.darkMode{
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+.lightMode{
+    background-color:white; 
+    color: black;
+}
